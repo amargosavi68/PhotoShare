@@ -1,0 +1,26 @@
+.container
+{
+    background-color: antiquewhite;
+}
+.navigation-container
+{
+     display: inline-flex;
+     padding: 10px;
+}
+
+.heading-text
+{
+     font-size: 22px;
+}
+
+.navigations
+{
+     margin: 0 20px;
+}
+
+.login-btn
+{
+     float: right;
+     transform: translateY(10px);
+     margin: 0px 10px;
+}
