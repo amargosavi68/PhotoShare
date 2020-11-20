@@ -24,3 +24,8 @@
      transform: translateY(10px);
      margin: 0px 10px;
 }
+
+.active 
+{
+     background-color: rgb(252, 217, 174);
+}

@@ -32,6 +32,30 @@ export class HomeComponent implements OnInit {
       author: 'Mayuri Bhuvad',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
+    },
+    {
+      id: '1',
+      profileImage: "amar.png",
+      image: 'assest/Images/x.png',
+      author: 'Amar Gosavi',
+      description: 'Application is developed by Amar Gosavi',
+      likes: '2'
+    },
+    {
+      id: '2',
+      profileImage: "amar.png",
+      image: 'assest/Images/x.png',
+      author: 'Omshree Dalvi',
+      description: 'Application is developed by Amar Gosavi',
+      likes: '2'
+    },
+    {
+      id: '3',
+      profileImage: "amar.png",
+      image: 'assest/Images/x.png',
+      author: 'Mayuri Bhuvad',
+      description: 'Application is developed by Amar Gosavi',
+      likes: '2'
     }
 
   ];
