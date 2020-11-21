@@ -8,6 +8,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { FormsModule } from "@angular/forms";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
@@ -33,6 +34,7 @@ import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
     MatListModule,
     MatSidenavModule,
     MatCardModule,
+    FormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,

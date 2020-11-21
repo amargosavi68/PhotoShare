@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Amar Gosavi',
+      title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     },
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Omshree Dalvi',
+      title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     },
@@ -30,6 +32,8 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Mayuri Bhuvad',
+      title: 'Dog Image',
+
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     },
@@ -38,6 +42,7 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Amar Gosavi',
+      title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     },
@@ -46,6 +51,7 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Omshree Dalvi',
+      title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     },
@@ -54,6 +60,7 @@ export class HomeComponent implements OnInit {
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
       author: 'Mayuri Bhuvad',
+      title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'
     }

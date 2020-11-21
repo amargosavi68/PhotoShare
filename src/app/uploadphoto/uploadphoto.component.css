@@ -11,15 +11,38 @@
      margin-top: 80px;
      padding: 30px;
      width: 40%;
+     box-shadow: 1px 1px 15px 3px #dad6d9;
 }
 
-mat-form-field, button
+mat-card-header
+{
+     justify-content: center;
+}
+
+mat-form-field, .file-field input[type="file"]
 {
      width: 80%;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
+     margin: 15px 0px;
+}
+
+.image-card img
+{
+     width: 60%;
+     margin: 20px;
 }
 
 button
 {
      background-color: #ffacff;
+     width: 50%;
+     padding: 3px;
+}
+
+@media (max-width: 768px)
+{
+     .photo-upload-card
+     {
+          width: 70%;
+     }
 }

@@ -3,6 +3,7 @@ export class Photo {
      'profileImage': string;
      'author': string;
      'image': string;
+     'title': string;
      'description': string;
      'likes': string;
 }

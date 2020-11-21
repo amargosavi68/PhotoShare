@@ -12,13 +12,15 @@ fxLayoutGap="10px">
           <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
 
           <mat-card-content>
+               {{ photo | json}}
+               <h2>{{ photo.title }}</h2>
                <p>
                {{ photo.description }}
                </p>
           </mat-card-content>
 
           <mat-card-actions>
-               <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+               <button mat-icon-button color="warn">
                     <i class="fa fa-heart-o"></i>
                </button>
                <span>{{photo.likes}} peoples liked</span>

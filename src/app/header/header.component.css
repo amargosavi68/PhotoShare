@@ -25,6 +25,17 @@
      margin: 0px 10px;
 }
 
+.fa-user
+{
+     height: 30px;
+     width: 30px;
+     justify-content: center;
+     align-items: center;
+     display: inline-flex;
+     border-radius: 50%;
+     border: 1px solid blue;
+}
+
 .active 
 {
      background-color: rgb(252, 217, 174);
