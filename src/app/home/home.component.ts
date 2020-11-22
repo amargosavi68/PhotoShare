@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
       author: 'Amar Gosavi',
       title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
-      likes: '2'
+      likes: '3'
     },
     {
       id: '2',
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
       id: '3',
       profileImage: "amar.png",
       image: 'assest/Images/x.png',
-      author: 'Mayuri Bhuvad',
+      author: 'Omkar Malwadkar',
       title: 'Dog Image',
       description: 'Application is developed by Amar Gosavi',
       likes: '2'

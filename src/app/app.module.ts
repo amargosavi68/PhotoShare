@@ -18,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
 import 'hammerjs';
 import { HomeComponent } from './home/home.component';
 import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
     HeaderComponent,
     HomeComponent,
     UploadphotoComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
