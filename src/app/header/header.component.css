@@ -1,28 +1,11 @@
-.container
-{
-    background-color: antiquewhite;
-}
-.navigation-container
-{
-     display: inline-flex;
-     padding: 10px;
-}
-
 .heading-text
 {
      font-size: 22px;
 }
 
-.navigations
+button
 {
-     margin: 0 20px;
-}
-
-.login-btn
-{
-     float: right;
-     transform: translateY(10px);
-     margin: 0px 10px;
+     margin: 0px 5px;
 }
 
 .fa-user
@@ -38,5 +21,5 @@
 
 .active 
 {
-     background-color: rgb(252, 217, 174);
+     background-color: rgba(236, 35, 9, 0.911);
 }

@@ -9,3 +9,8 @@ body
      font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.flex-spacer
+{
+     flex: 1 1 auto;
+}
+
