@@ -9,7 +9,7 @@ import { SignupComponent } from "../signup/signup.component";
 })
 export class LoginComponent implements OnInit {
 
-  user = {username: '', password: ''};
+  user = {username: '', password: '', admin: false};
 
   constructor(public signupDialogRef: MatDialogRef<LoginComponent>, public dialog: MatDialog) { }
 
