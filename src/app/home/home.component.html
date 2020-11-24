@@ -20,7 +20,7 @@ fxLayoutGap="10px">
           </mat-card-content>
 
           <mat-card-actions>
-               <button mat-icon-button color="warn">
+               <button mat-icon-button [disabled]="!true" color="warn">
                     <i class="fa fa-heart-o"></i>
                </button>
                <span>{{photo.likes}} peoples liked</span>

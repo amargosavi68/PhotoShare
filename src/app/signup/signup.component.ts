@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from "@angular/material/dialog";
 import { User } from "../shared/user";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
@@ -12,8 +12,6 @@ export class SignupComponent implements OnInit {
 
   'signupForm': FormGroup;
   'user': User;
-
-  //user = {fullname: "", email: "", username: "", password:""};
 
   constructor(public dialogRef: MatDialogRef<SignupComponent>, private fb: FormBuilder) {
     this.createForm();
