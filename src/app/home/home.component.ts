@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Photo } from '../shared/photo';
+import { PhotosService } from '../services/photos.service';
+import { Photo } from "../shared/photo";
 
 @Component({
   selector: 'app-home',
@@ -7,69 +8,13 @@ import { Photo } from '../shared/photo';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  photos: Photo[] = [
-    {
-      id: '1',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Amar Gosavi',
-      title: 'Dog Image',
-      description: 'Application is developed by Amar Gosavi',
-      likes: '3'
-    },
-    {
-      id: '2',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Omshree Dalvi',
-      title: 'Dog Image',
-      description: 'Application is developed by Amar Gosavi',
-      likes: '2'
-    },
-    {
-      id: '3',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Mayuri Bhuvad',
-      title: 'Dog Image',
-
-      description: 'Application is developed by Amar Gosavi',
-      likes: '2'
-    },
-    {
-      id: '1',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Amar Gosavi',
-      title: 'Dog Image',
-      description: 'Application is developed by Amar Gosavi',
-      likes: '2'
-    },
-    {
-      id: '2',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Omshree Dalvi',
-      title: 'Dog Image',
-      description: 'Application is developed by Amar Gosavi',
-      likes: '2'
-    },
-    {
-      id: '3',
-      profileImage: "amar.png",
-      image: 'assest/Images/x.png',
-      author: 'Omkar Malwadkar',
-      title: 'Dog Image',
-      description: 'Application is developed by Amar Gosavi',
-      likes: '2'
-    }
-
-  ];
-
-  constructor() { }
+  'photos': Photo[];
+  constructor(public photoService: PhotosService) { }
 
   ngOnInit(): void {
+    this.photoService.getPhotos()
+      .subscribe(photos => this.photos = photos);
   }
+
 
 }

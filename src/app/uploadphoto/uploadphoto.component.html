@@ -7,33 +7,21 @@
                <mat-form-field>
                     <input matInput type="text" name="Title" placeholder="Enter title of Image">
                </mat-form-field><br>
-               <div class="file-field">
-                    <input type="file"  accept=".jpg, .jpeg, .png">
-               </div>
-               <div *ngIf="true" class="image-card">
-                    <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-               </div>
+
+               <mat-form-field>
+                    <ngx-mat-file-input placeholder="Select image file" accept=".jpeg, .jpg, .png"></ngx-mat-file-input>
+                    <mat-icon matSuffix><span class="fa fa-folder"></span></mat-icon>
+               </mat-form-field>
+               
                <mat-form-field>
                     <textarea matInput rows="5" placeholder="Enter caption of image"></textarea>
                </mat-form-field>
+
           </mat-card-content>
+
           <mat-card-actions>
                <button mat-button>Submit</button>
           </mat-card-actions>
+          
      </mat-card>
 </div>
-
-<!-- 
-<mat-form-field>
-     <input matInput type="text" name="Title" placeholder="Enter title of Image">
-</mat-form-field><br>
-<div class="file-field">
-     <input type="file"  accept=".jpg, .jpeg, .png">
-</div>
-<div *ngIf="true" class="image-card">
-     <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
-</div>
-
-<mat-form-field>
-     <textarea matInput rows="5" placeholder="Enter caption of image"></textarea>
-</mat-form-field> -->

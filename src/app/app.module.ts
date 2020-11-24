@@ -11,6 +11,7 @@ import { MatListModule } from "@angular/material/list";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
+import { MaterialFileInputModule } from "ngx-material-file-input";
 import { MatDialogModule } from "@angular/material/dialog";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
@@ -23,6 +24,9 @@ import { HomeComponent } from './home/home.component';
 import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+
+
+import { PhotosService } from "./services/photos.service";
 
 
 @NgModule({
@@ -45,6 +49,7 @@ import { SignupComponent } from './signup/signup.component';
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
+    MaterialFileInputModule,
     MatButtonModule,
     FlexLayoutModule,
     FormsModule,
@@ -54,7 +59,9 @@ import { SignupComponent } from './signup/signup.component';
     LoginComponent,
     SignupComponent
   ],
-  providers: [],
+  providers: [
+    PhotosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
