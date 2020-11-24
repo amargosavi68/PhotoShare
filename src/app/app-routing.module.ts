@@ -6,6 +6,7 @@ import { UploadphotoComponent } from "./uploadphoto/uploadphoto.component";
 const routes: Routes = [
   {path:'home', component:HomeComponent},
   {path: 'uploadphoto', component: UploadphotoComponent},
+  //{path: 'analysis', component: AnalysisComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 ];
 

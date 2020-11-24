@@ -6,8 +6,7 @@
      </mat-toolbar>
 
      <div>
-          <p>{{ user | json}}</p>
-          <form novalidate (ngSubmit) = "onSubmit()">
+          <form novalidate #loginform="ngForm" (ngSubmit) = "onSubmit()">
                <mat-dialog-content>
                     <p>
                          <mat-form-field>
@@ -20,15 +19,18 @@
                               <input matInput type="password" name="password" placeholder="Password" [(ngModel)]="user.password" required>
                          </mat-form-field>
                     </p>
-
                </mat-dialog-content>
                <mat-dialog-actions>
                     <span class="flex-spacer"></span>
                     
                     <button mat-raised-button mat-dialog-close> Cancle</button>
 
-                    <button mat-raised-button color="primary">Login</button>
+                    <button mat-raised-button [disabled]="loginform.invalid" color="primary">Login</button>
                </mat-dialog-actions>
           </form>
+
+          <p class="goto-signup-form">
+               New Here? <span (click) = "openSignupForm()">Sign Up</span>
+          </p>
      </div>
 </div>

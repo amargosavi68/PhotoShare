@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { SignupComponent } from "../signup/signup.component";
 
 @Component({
   selector: 'app-login',
@@ -10,14 +11,19 @@ export class LoginComponent implements OnInit {
 
   user = {username: '', password: ''};
 
-  constructor(public dialogRef: MatDialogRef<LoginComponent>) { }
+  constructor(public signupDialogRef: MatDialogRef<LoginComponent>, public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
+  openSignupForm() {
+    this.signupDialogRef.close();
+    this.dialog.open(SignupComponent, {width:"500px", height: "550px"});
+  }
+
   onSubmit() {
     console.log("User: ", this.user);
-    this.dialogRef.close();
+    this.signupDialogRef.close();
   }
 
 }

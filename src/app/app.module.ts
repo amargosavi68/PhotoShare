@@ -51,7 +51,8 @@ import { SignupComponent } from './signup/signup.component';
     ReactiveFormsModule
   ],
   entryComponents:[
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
