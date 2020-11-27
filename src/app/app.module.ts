@@ -19,6 +19,9 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 
 import 'hammerjs';
+import { ChartsModule } from "ng2-charts";
+import 'chart.js';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -28,6 +31,7 @@ import { SignupComponent } from './signup/signup.component';
 
 
 import { PhotosService } from "./services/photos.service";
+import { AnalysisComponent } from './analysis/analysis.component';
 
 
 @NgModule({
@@ -38,6 +42,7 @@ import { PhotosService } from "./services/photos.service";
     UploadphotoComponent,
     LoginComponent,
     SignupComponent,
+    AnalysisComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import { PhotosService } from "./services/photos.service";
     MatProgressSpinnerModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule
   ],
   entryComponents:[
     LoginComponent,

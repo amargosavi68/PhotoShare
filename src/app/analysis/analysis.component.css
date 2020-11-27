@@ -1,0 +1,16 @@
+h1 {
+     text-align: center;
+}
+
+.container
+{
+     justify-content: center;
+     align-items: center;
+}
+
+mat-card
+{
+     width: 50%;
+     box-shadow: 5px 5px 5px 10px #aaaaaa;
+}
+

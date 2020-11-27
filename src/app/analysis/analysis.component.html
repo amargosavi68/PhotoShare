@@ -1,0 +1,18 @@
+<h1>Analysis of Data</h1>
+
+<div class="container">
+
+     <mat-card>
+          <div class="chart-wrapper">
+               <canvas baseChart 
+               [datasets]="barChartData"
+               [labels]="barChartLabels"
+               [options]="barChartOptions"
+               [plugins]="barChartPlugins"
+               [legend]="barChartLegend"
+               [chartType]="barChartType">
+             </canvas>
+           </div>
+     </mat-card>
+
+</div>
