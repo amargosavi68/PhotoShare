@@ -13,4 +13,9 @@ export class PhotosService {
   getPhotos(): Observable<Photo[]> {
     return of(PHOTOS).pipe(delay(1000));
   }
+
+  postPhoto(photo: Photo): Observable<string> {
+    PHOTOS.push(photo);
+    return of("Photo Uploaded Successfully..").pipe(delay(1000));
+  }
 }

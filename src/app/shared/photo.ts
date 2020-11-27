@@ -1,9 +1,9 @@
 export class Photo {
      'id': string;
-     'profileImage': string;
      'author': string;
+     'location': string;
      'image': string;
      'title': string;
      'description': string;
-     'likes': string;
+     //'likes': string;
 }

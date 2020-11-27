@@ -1,5 +1,5 @@
 <div class="container">
-     <mat-card class="photo-upload-card">
+     <mat-card *ngIf="!uploading" class="photo-upload-card">
           <mat-card-header>
                <h2>Add Photo</h2>
           </mat-card-header>
@@ -8,6 +8,14 @@
           <form novalidate #uform="ngForm" [formGroup]="uploadForm" (ngSubmit) = "onSubmit()">
                
                <mat-card-content>
+                    <mat-form-field>
+                         <input matInput type="text" name="author" formControlName="author"  placeholder="Enter Your Full Name" required>
+                    </mat-form-field><br>
+
+                    <mat-form-field>
+                         <input matInput type="text" name="location" formControlName="location"  placeholder="Enter your current Location">
+                    </mat-form-field><br>
+
                     <mat-form-field>
                          <input matInput type="text" name="Title" formControlName="title"  placeholder="Enter title of Image" required>
                     </mat-form-field><br>
@@ -28,8 +36,8 @@
 
           </form>
           
-
-          
-          
      </mat-card>
+
+     <mat-spinner *ngIf="uploading"></mat-spinner>
+
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { PhotosService } from '../services/photos.service';
-import { Formdata } from "../shared/upload";
+import { Photo } from "../shared/photo";
 
 @Component({
   selector: 'app-uploadphoto',
@@ -11,7 +11,7 @@ import { Formdata } from "../shared/upload";
 export class UploadphotoComponent implements OnInit {
 
   'uploadForm': FormGroup;
-  'formData': Formdata;
+  'formData': Photo;
   @ViewChild('uform') uploadFormDirective:any;
 
   constructor(private fb: FormBuilder, private photoService: PhotosService) { 
@@ -21,8 +21,13 @@ export class UploadphotoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  msg: string = '';
+  uploading: boolean = false;
+
   createForm() {
     this.uploadForm = this.fb.group({
+      author: '',
+      location:'',
       title: '',
       image: '',
       description: ''
@@ -31,12 +36,19 @@ export class UploadphotoComponent implements OnInit {
 
   onSubmit() {
     this.formData = this.uploadForm.value;
+    this.uploading = true;
+    this.photoService.postPhoto(this.formData)
+      .subscribe(msg => this.msg = msg);
+    setTimeout(()=> this.uploading = false, 2000);
     console.log(this.formData);
     this.uploadForm.reset({
-      title:'',
-      image:'',
-      description:'',
+      author: '',
+      location:'',
+      title: '',
+      image: '',
+      description: ''
     });
+    this.msg = '';
     this.uploadFormDirective.resetForm();
   }
 }

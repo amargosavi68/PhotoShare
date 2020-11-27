@@ -13,6 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MaterialFileInputModule } from "ngx-material-file-input";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
@@ -51,6 +52,7 @@ import { PhotosService } from "./services/photos.service";
     MatInputModule,
     MaterialFileInputModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule
