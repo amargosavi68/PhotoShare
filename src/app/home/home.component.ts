@@ -8,7 +8,9 @@ import { Photo } from "../shared/photo";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
   'photos': Photo[];
+
   constructor(public photoService: PhotosService) { }
 
   ngOnInit(): void {
@@ -16,5 +18,8 @@ export class HomeComponent implements OnInit {
       .subscribe(photos => this.photos = photos);
   }
 
-
+  deletePhoto(id: string) {
+    //alert("Photo deleted "+ id);
+    this.photoService.deletePhoto(id);
+  }
 }

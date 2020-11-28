@@ -18,4 +18,15 @@ export class PhotosService {
     PHOTOS.push(photo);
     return of("Photo Uploaded Successfully..").pipe(delay(1000));
   }
+
+  deletePhoto(id: string) {
+    for (let index = 0; index < PHOTOS.length; index++) {
+      if (PHOTOS[index].id == id) {
+        PHOTOS.splice(index,1);
+        break;
+      }
+      
+    } 
+    alert(id);
+  }
 }

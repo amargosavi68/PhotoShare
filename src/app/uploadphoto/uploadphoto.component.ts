@@ -39,7 +39,7 @@ export class UploadphotoComponent implements OnInit {
     this.uploading = true;
     this.photoService.postPhoto(this.formData)
       .subscribe(msg => this.msg = msg);
-    setTimeout(()=> this.uploading = false, 2000);
+    setTimeout(() => { this.uploading = false }, 2000);
     console.log(this.formData);
     this.uploadForm.reset({
       author: '',

@@ -5,27 +5,28 @@ fxLayoutGap="10px">
 
           <mat-card-header>
                <div mat-card-avatar class="example-header-image"></div>
-               <mat-card-title>{{ photo.author }}</mat-card-title>
+               <mat-card-title>
+                    {{ photo.author }}
+               </mat-card-title>
+
+               <span class="flex-spacer"></span>
+               <button class="delete-btn" mat-mini-fab color="warn" (click)="deletePhoto(photo.id)">
+                    <span class="fa fa-trash"></span>
+               </button>
+
                <mat-card-subtitle>{{ photo.location }}</mat-card-subtitle>
           </mat-card-header>
 
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <img mat-card-image src="{{photo.image}}" alt="image">
 
           <mat-card-content>
                <!-- {{ photo | json}} -->
                <h2>{{ photo.title }}</h2>
+               
                <p>
                {{ photo.description }}
                </p>
           </mat-card-content>
-
-          <!-- <mat-card-actions>
-               <button mat-icon-button [disabled]="!true" color="warn">
-                    <i class="fa fa-heart-o"></i>
-               </button>
-               <span>{{photo.likes}} peoples liked</span>
-               <button mat-icon-button color="warn"><i class="fa fa-share"></i></button>
-          </mat-card-actions> -->
           
      </mat-card>
 </div>
