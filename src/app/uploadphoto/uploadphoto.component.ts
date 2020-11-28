@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { PhotosService } from '../services/photos.service';
-import { Photo } from "../shared/photo";
+import { Photo, Category } from "../shared/photo";
 
 @Component({
   selector: 'app-uploadphoto',
@@ -12,6 +12,8 @@ export class UploadphotoComponent implements OnInit {
 
   'uploadForm': FormGroup;
   'formData': Photo;
+  'CategoryTypes' = Category;
+
   @ViewChild('uform') uploadFormDirective:any;
 
   constructor(private fb: FormBuilder, private photoService: PhotosService) { 
@@ -30,6 +32,7 @@ export class UploadphotoComponent implements OnInit {
       location:'',
       title: '',
       image: '',
+      category: '',
       description: ''
     });
   }
@@ -46,6 +49,7 @@ export class UploadphotoComponent implements OnInit {
       location:'',
       title: '',
       image: '',
+      category: '',
       description: ''
     });
     this.msg = '';

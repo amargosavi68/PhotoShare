@@ -1,32 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Photo } from "../shared/photo";
-import { PHOTOS } from "../shared/PHOTOS";
+//import { PHOTOS } from "../shared/PHOTOS";
 import { Observable, of } from "rxjs";
 import { delay } from "rxjs/operators";
+import { HttpClient } from "@angular/common/http";
+import { baseURL } from "../shared/baseurl";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PhotosService {
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getPhotos(): Observable<Photo[]> {
-    return of(PHOTOS).pipe(delay(1000));
+    return this.http.get<Photo[]>(baseURL+ 'home');
   }
 
   postPhoto(photo: Photo): Observable<string> {
-    PHOTOS.push(photo);
+    //PHOTOS.push(photo);
     return of("Photo Uploaded Successfully..").pipe(delay(1000));
   }
 
   deletePhoto(id: string) {
-    for (let index = 0; index < PHOTOS.length; index++) {
-      if (PHOTOS[index].id == id) {
-        PHOTOS.splice(index,1);
-        break;
-      }
+    // for (let index = 0; index < PHOTOS.length; index++) {
+    //   if (PHOTOS[index].id == id) {
+    //     PHOTOS.splice(index,1);
+    //     break;
+    //   }
       
-    } 
+    // } 
     alert(id);
   }
 }

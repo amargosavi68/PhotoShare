@@ -26,6 +26,14 @@
                     </mat-form-field>
 
                     <mat-form-field>
+                         <mat-select placeholder="Select Category of Image" formControlName="category" required>
+                              <mat-option *ngFor="let category of CategoryTypes" [value]="category">
+                           {{ category }}
+                              </mat-option>
+                         </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field>
                          <textarea matInput rows="5" placeholder="Enter caption of image" formControlName="description" required></textarea>
                     </mat-form-field>
                </mat-card-content>

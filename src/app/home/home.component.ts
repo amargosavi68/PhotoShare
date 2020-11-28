@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { PhotosService } from '../services/photos.service';
 import { Photo } from "../shared/photo";
 
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   'photos': Photo[];
 
-  constructor(public photoService: PhotosService) { }
+  constructor(public photoService: PhotosService, @Inject('BaseURL') private BaseURL:string) { }
 
   ngOnInit(): void {
     this.photoService.getPhotos()

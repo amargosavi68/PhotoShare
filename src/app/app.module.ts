@@ -12,10 +12,12 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import { MaterialFileInputModule } from "ngx-material-file-input";
+import { MatSelectModule } from "@angular/material/select";
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 
 import 'hammerjs';
@@ -28,10 +30,12 @@ import { HomeComponent } from './home/home.component';
 import { UploadphotoComponent } from './uploadphoto/uploadphoto.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-
+import { AnalysisComponent } from './analysis/analysis.component';
 
 import { PhotosService } from "./services/photos.service";
-import { AnalysisComponent } from './analysis/analysis.component';
+import { FileuploadService } from "./services/fileupload.service";
+
+import { baseURL } from "./shared/baseurl";
 
 
 @NgModule({
@@ -55,20 +59,24 @@ import { AnalysisComponent } from './analysis/analysis.component';
     MatFormFieldModule,
     MatDialogModule,
     MatInputModule,
+    MatSelectModule,
     MaterialFileInputModule,
     MatButtonModule,
     MatProgressSpinnerModule,
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   entryComponents:[
     LoginComponent,
     SignupComponent
   ],
   providers: [
-    PhotosService
+    PhotosService,
+    FileuploadService,
+    { provide:'BaseURL', useValue: baseURL}
   ],
   bootstrap: [AppComponent]
 })

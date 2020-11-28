@@ -7,6 +7,7 @@ export const PHOTOS: Photo[] = [
           location: 'Maharashtra',
           author: 'Amar Gosavi',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi',
           //likes: '3'
         },
@@ -17,6 +18,7 @@ export const PHOTOS: Photo[] = [
           location: 'Maharashtra',
           author: 'Omshree Dalvi',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi',
           //likes: '2'
         },
@@ -26,6 +28,7 @@ export const PHOTOS: Photo[] = [
           image: 'assets/Nature/home.jpg',
           author: 'Mayuri Bhuvad',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi'
           //likes: '2'
         },
@@ -35,6 +38,7 @@ export const PHOTOS: Photo[] = [
           image: 'assets/Nature/grass.jpg',
           author: 'Amar Gosavi',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi'
           //likes: '2'
         },
@@ -44,6 +48,7 @@ export const PHOTOS: Photo[] = [
           image: 'assets/Nature/field.jpg',
           author: 'Omshree Dalvi',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi'
           //likes: '2'
         },
@@ -53,6 +58,7 @@ export const PHOTOS: Photo[] = [
           image: 'assets/Nature/road.jpg',
           author: 'Omkar Malwadkar',
           title: 'Dog Image',
+          category: 'Nature Photography',
           description: 'Application is developed by Amar Gosavi'
           //likes: '2'
         }
