@@ -11,15 +11,5 @@ export class FileuploadService {
 
   constructor(private http: HttpClient) { }
 
-  post_Image(img: File): Observable<String> {
-    console.log("In file upload Service: "+ img);
-    var formdata = new FormData();
-    formdata.append('imageFile',img);
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
-    return this.http.post<String>(baseURL + 'savephoto', formdata, httpOptions);
-  }
+  
 }

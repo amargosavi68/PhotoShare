@@ -21,7 +21,6 @@ export class HomeComponent implements OnInit {
 
   deletePhoto(id: string) {
     //alert("Photo deleted "+ id);
-    this.photoService.deletePhoto(id)
-    .subscribe(resp => this.resp = resp);
+    this.photoService.deletePhoto(id);
   }
 }

@@ -1,3 +1,4 @@
+/*
 import { Photo } from "./photo";
 
 export const PHOTOS: Photo[] = [
@@ -63,3 +64,4 @@ export const PHOTOS: Photo[] = [
           //likes: '2'
         }
 ]
+*/

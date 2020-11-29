@@ -1,12 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Photo } from "../shared/photo";
-//import { PHOTOS } from "../shared/PHOTOS";
+import { Category, Photo } from "../shared/photo";
 import { Observable, of, throwError } from "rxjs";
-import { catchError, delay } from "rxjs/operators";
+import { catchError, delay, filter } from "rxjs/operators";
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpRequest } from "@angular/common/http";
 import { baseURL } from "../shared/baseurl";
 import { helpers } from 'chart.js';
-//import { FileuploadService } from './fileupload.service';
 
 @Injectable({
   providedIn: 'root'
@@ -53,13 +51,13 @@ export class PhotosService {
 
   }
 
-
-  deletePhoto(id: string): Observable<String | any> {
+  deletePhoto(id: string): Observable<Photo | any> {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
-    return this.http.delete<String | any>(baseURL+ 'home/'+ id, httpOptions);
+    return this.http.delete<Photo | any>(baseURL+ 'home/'+ id, httpOptions);
   }
+
 }

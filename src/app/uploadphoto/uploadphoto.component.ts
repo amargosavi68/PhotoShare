@@ -48,15 +48,14 @@ export class UploadphotoComponent implements OnInit {
 
   onSubmit(): void {
     this.formData = this.uploadForm.value;
-    console.log(this.formData);
     this.uploading = true;
     this.photoService.postPhoto(this.formData, this.uploadForm.get('imageFile')?.value._files[0])
     .subscribe((res: any) => {
-      console.log(res);
+      //console.log(res);
     }, (err: any) => {
       console.log(err);
     });
-    setTimeout(() => { this.uploading = false }, 2000);
+    setTimeout(() => { this.uploading = false }, 1000);
     //console.log(this.uploadForm.get('imageFile')?.value);
     this.uploadForm.reset({
       author: '',
