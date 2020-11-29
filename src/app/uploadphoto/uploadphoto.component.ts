@@ -1,10 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { PhotosService } from '../services/photos.service';
-import { FileuploadService } from "../services/fileupload.service";
 import { Photo, Category } from "../shared/photo";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { baseURL } from '../shared/baseurl';
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-uploadphoto',

@@ -4,7 +4,6 @@
                <h2>Add Photo</h2>
           </mat-card-header>
           
-          <p>{{ uploadForm.value | json }}</p>
           <form novalidate #uform="ngForm" [formGroup]="uploadForm" (ngSubmit) = "onSubmit()" enctype="multipart/form-data">
                
                <mat-card-content>

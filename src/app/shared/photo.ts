@@ -9,4 +9,4 @@ export class Photo {
      //'likes': string;
 };
 
-export const Category: string[] = ['Wildlife Photography', 'Nature Photography', 'Weather Photography', 'Food Photography', 'Macro Photography', 'Sport Photography', 'Fashion Photography', 'Still Life Photography'];
+export const Category: string[] = ['Wildlife-Photography', 'Nature-Photography', 'Weather-Photography', 'Food-Photography', 'Macro-Photography', 'Sport-Photography', 'Fashion-Photography', 'Still-Life-Photography'];

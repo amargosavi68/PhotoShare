@@ -4,7 +4,6 @@ import { Observable, of, throwError } from "rxjs";
 import { catchError, delay, filter } from "rxjs/operators";
 import { HttpClient, HttpErrorResponse, HttpHeaders, HttpParams, HttpRequest } from "@angular/common/http";
 import { baseURL } from "../shared/baseurl";
-import { helpers } from 'chart.js';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +27,7 @@ export class PhotosService {
     return this.http.get<Photo[]>(baseURL + 'home');
   }
 
-  'file': String = '';
+  'file': string = '';
 
   postPhoto(photo: Photo, file: File): Observable<any> {
     const formData = new FormData();
@@ -51,13 +50,19 @@ export class PhotosService {
 
   }
 
-  deletePhoto(id: string): Observable<Photo | any> {
+  deletePhoto(id: string): Observable<Photo> {
+    //alert(id);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
-    }
-    return this.http.delete<Photo | any>(baseURL+ 'home/'+ id, httpOptions);
+    };
+    return this.http.delete<Photo>(baseURL + 'home/'+ id, httpOptions);
+  }
+
+
+  getCategorialPhotos(category: string): Observable<Photo[]> {
+    return this.http.get<Photo[]>(baseURL + 'analysis/' + category);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
+import { catchError } from 'rxjs/operators';
 import { PhotosService } from '../services/photos.service';
 import { Photo } from "../shared/photo";
 
@@ -20,7 +21,9 @@ export class HomeComponent implements OnInit {
   }
 
   deletePhoto(id: string) {
-    //alert("Photo deleted "+ id);
-    this.photoService.deletePhoto(id);
+    this.photoService.deletePhoto(id)
+    .subscribe(resp => {
+      console.log(resp);
+    });
   }
 }
