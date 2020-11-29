@@ -5,7 +5,7 @@
           </mat-card-header>
           
           <p>{{ uploadForm.value | json }}</p>
-          <form novalidate #uform="ngForm" [formGroup]="uploadForm" (ngSubmit) = "onSubmit()">
+          <form novalidate #uform="ngForm" [formGroup]="uploadForm" (ngSubmit) = "onSubmit()" enctype="multipart/form-data">
                
                <mat-card-content>
                     <mat-form-field>
@@ -21,7 +21,7 @@
                     </mat-form-field><br>
 
                     <mat-form-field>
-                         <ngx-mat-file-input placeholder="Select image file" accept=".jpeg, .jpg, .png" formControlName="image"></ngx-mat-file-input>
+                         <ngx-mat-file-input placeholder="Select image file" accept=".jpeg, .jpg, .png" formControlName="imageFile" name="imageFile"></ngx-mat-file-input>
                          <mat-icon matSuffix><span class="fa fa-folder" ></span></mat-icon>
                     </mat-form-field>
 
@@ -46,6 +46,6 @@
           
      </mat-card>
 
-     <mat-spinner *ngIf="uploading"></mat-spinner>
+     <mat-spinner *ngIf="uploading">Uploading...</mat-spinner>
 
 </div>

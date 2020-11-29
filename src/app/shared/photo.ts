@@ -1,5 +1,5 @@
 export class Photo {
-     'id': string;
+     '_id': string;
      'author': string;
      'location': string;
      'image': string;

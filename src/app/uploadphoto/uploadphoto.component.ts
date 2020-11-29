@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { PhotosService } from '../services/photos.service';
+import { FileuploadService } from "../services/fileupload.service";
 import { Photo, Category } from "../shared/photo";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { baseURL } from '../shared/baseurl';
 
 @Component({
   selector: 'app-uploadphoto',
@@ -11,48 +14,59 @@ import { Photo, Category } from "../shared/photo";
 export class UploadphotoComponent implements OnInit {
 
   'uploadForm': FormGroup;
+  'author'= '';
+  'location'='';
+  'title'= '';
+  'imageFile': File;
+  'category' = '';
+  'description' = '';
+
   'formData': Photo;
   'CategoryTypes' = Category;
 
   @ViewChild('uform') uploadFormDirective:any;
 
-  constructor(private fb: FormBuilder, private photoService: PhotosService) { 
+  constructor(private fb: FormBuilder, private photoService: PhotosService, private http: HttpClient) { 
     this.createForm();
   }
 
   ngOnInit(): void {
   }
 
-  msg: string = '';
   uploading: boolean = false;
-
+  
   createForm() {
     this.uploadForm = this.fb.group({
       author: '',
       location:'',
       title: '',
-      image: '',
+      imageFile: null,
       category: '',
       description: ''
     });
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.formData = this.uploadForm.value;
-    this.uploading = true;
-    this.photoService.postPhoto(this.formData)
-      .subscribe(msg => this.msg = msg);
-    setTimeout(() => { this.uploading = false }, 2000);
     console.log(this.formData);
+    this.uploading = true;
+    this.photoService.postPhoto(this.formData, this.uploadForm.get('imageFile')?.value._files[0])
+    .subscribe((res: any) => {
+      console.log(res);
+    }, (err: any) => {
+      console.log(err);
+    });
+    setTimeout(() => { this.uploading = false }, 2000);
+    //console.log(this.uploadForm.get('imageFile')?.value);
     this.uploadForm.reset({
       author: '',
       location:'',
       title: '',
-      image: '',
+      imageFile: null,
       category: '',
       description: ''
     });
-    this.msg = '';
+    
     this.uploadFormDirective.resetForm();
   }
 }

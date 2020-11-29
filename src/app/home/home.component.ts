@@ -10,8 +10,9 @@ import { Photo } from "../shared/photo";
 export class HomeComponent implements OnInit {
 
   'photos': Photo[];
+  resp: string = '';
 
-  constructor(public photoService: PhotosService, @Inject('BaseURL') private BaseURL:string) { }
+  constructor(public photoService: PhotosService, @Inject('BaseURL') public BaseURL:string) { }
 
   ngOnInit(): void {
     this.photoService.getPhotos()
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   deletePhoto(id: string) {
     //alert("Photo deleted "+ id);
-    this.photoService.deletePhoto(id);
+    this.photoService.deletePhoto(id)
+    .subscribe(resp => this.resp = resp);
   }
 }
