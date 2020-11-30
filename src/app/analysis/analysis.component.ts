@@ -34,7 +34,7 @@ export class AnalysisComponent implements OnInit {
     .subscribe(photos => this.count[6] = photos.length);
     this.photoService.getCategorialPhotos("Still-Life-Photography")
     .subscribe(photos => this.count[7] = photos.length);
-    
+    console.log(this.count);
   }
 
   barChartOptions: ChartOptions = {
